@@ -1,0 +1,15 @@
+{
+  "name": "example-buildscript",
+  "version": "0.0.1",
+  "dependencies": {
+    "embedstatic-go": "git+https://github.com/alphapeter/embedstatic-go.git"
+  },
+  "embedstatic-go": {
+    "files": "index.html,static",
+    "package": "main",
+    "output": "data.go"
+  },
+  "scripts": {
+    "embed": "embedstatic"
+  }
+}
