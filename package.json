@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Embeds static resources in a go map by by createing binary strings",
   "main": "index.js",
+  "bin": {
+    "embeddstatic": "./index.js"
+  },
   "scripts": {
     "test": "cd example && npm install && npm run build"
   },
