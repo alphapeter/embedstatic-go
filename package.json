@@ -4,9 +4,10 @@
   "description": "Embeds static resources in a go map by by createing binary strings",
   "main": "index.js",
   "bin": {
-    "embeddstatic": "./index.js"
+    "embedstatic": "index.js"
   },
   "scripts": {
+    "embedstatic": "node index.js",
     "test": "cd example && npm install && npm run build"
   },
   "keywords": [
@@ -19,5 +20,10 @@
     "data"
   ],
   "author": "Peter Klaesson",
-  "license": "MIT"
+  "license": "MIT",
+  "embedstatic-go": {
+    "files": "example/index.html",
+    "package": "main",
+    "output": "test.go"
+  }
 }

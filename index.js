@@ -1,9 +1,10 @@
+#!/usr/bin/env node
+
 let fs = require('fs')
 
-
-let files = (process.argv[2] || process.env.npm_package_embedstatic_files || 'dist').split(',')
-let packageName = process.argv[3] || process.env.npm_package_embedstatic_package  || 'static'
-let targetFile =  process.argv[4] || process.env.npm_package_embedstatic_output || 'content.go'
+let files = (process.argv[2] || process.env.npm_package_embedstatic_go_files || 'dist').split(',')
+let packageName = process.argv[3] || process.env.npm_package_embedstatic_go_package  || 'static'
+let targetFile =  process.argv[4] || process.env.npm_package_embedstatic_go_output || 'content.go'
 
 var wstream = fs.createWriteStream(targetFile);
 
